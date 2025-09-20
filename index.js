@@ -11,7 +11,15 @@ dotenv.config();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://portfolio-frontend-eight-blue.vercel.app",
+      "http://localhost:5173",
+    ],
+    credentials: true,
+  })
+);
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
