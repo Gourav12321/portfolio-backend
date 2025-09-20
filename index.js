@@ -16,6 +16,7 @@ app.use(
     origin: [
       "https://portfolio-frontend-eight-blue.vercel.app",
       "http://localhost:5173",
+      "https://www.gouravdev.me",
     ],
     credentials: true,
   })
